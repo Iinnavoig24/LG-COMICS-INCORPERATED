@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Collection</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arimo:wght@700&family=Kantumruy+Pro&display=swap" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arimo', sans-serif;
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: black;
+    }
+
+    header {
+      padding: 3% 2% 1%;
+      font-size: 2.5vw;
+      font-family: 'Banquise-Regular';
+      font-weight: 700;
+      background-color: rgba(255,255,255,0.8);
+    }
+
+    .filters {
+      display: flex;
+      justify-content: space-around;
+      padding: 1% 2%;
+      background-color: rgba(255,255,255,0.8);
+    }
+
+    .filters button {
+      background-color: #004ABC;
+      color: white;
+      padding: 1.5% 2.5%;
+      border: none;
+      font-family: 'Arimo', sans-serif;
+      font-weight: 700;
+      font-size: 1vw;
+      cursor: pointer;
+    }
+
+    .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3%;
+  padding: 4% 2% 14%; /* ⬅️ This is the only change */
+  background-color: rgba(255,255,255,0.8);
+}
+
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .comic {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .comic-box {
+      width: 100%;
+      padding-top: 150%;
+      background-color: #ccc;
+      position: relative;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .comic-title {
+      color: #004ABC;
+      font-family: 'Kantumruy Pro', sans-serif;
+      font-size: 0.9vw;
+      text-decoration: underline;
+      margin-top: 1%;
+      cursor: pointer;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #004ABC;
+      color: white;
+      font-family: 'Arimo', sans-serif;
+      font-weight: 700;
+      font-size: 1.2vw;
+      display: flex;
+      justify-content: space-around;
+      padding: 1.5% 0;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    const backgrounds = [
+      'collection-backgrounds/batmansuperman.jpg',
+      'collection-backgrounds/geiger.jpg',
+      'collection-backgrounds/spawnandbatman.jpg',
+      'collection-backgrounds/spiderman.jpg',
+      'collection-backgrounds/xmen.jpg'
+    ];
+    document.body.style.backgroundImage = `url('${backgrounds[Math.floor(Math.random() * backgrounds.length)]}')`;
+  </script>
+
+  <header>LG COMICS*</header>
+
+  <div class="filters">
+    <button onclick="location.href='search.html'">FILTER BY KEYWORD</button>
+    <button onclick="location.href='character.html'">FILTER BY CHARACTER</button>
+    <button onclick="location.href='publish.html'">FILTER BY PUBLISHER</button>
+  </div>
+
+  <div class="grid">
+    <!-- Slot 1 -->
+    <div class="comic">
+      <a href="spiderman-186.html" style="width: 100%; text-decoration: none;">
+        <div class="comic-box" style="background-image: url('covers/spiderman186.jpg');"></div>
+      </a>
+      <a href="spiderman-186.html" class="comic-title">The Amazing Spider-Man #186</a>
+    </div>
+
+    <!-- Slot 2 -->
+    <div class="comic">
+      <a href="undiscovered-country-25.html" style="width: 100%; text-decoration: none;">
+        <div class="comic-box" style="background-image: url('covers/undiscovered-country-25.jpg');"></div>
+      </a>
+      <a href="undiscovered-country-25.html" class="comic-title">Undiscovered Country #25</a>
+    </div>
+
+    <!-- Slot 3 -->
+    <div class="comic">
+      <a href="howard-the-duck-1.html" style="width: 100%; text-decoration: none;">
+        <div class="comic-box" style="background-image: url('covers/howard-the-duck-1.jpg');"></div>
+      </a>
+      <a href="howard-the-duck-1.html" class="comic-title">Howard the Duck #1</a>
+    </div>
+
+    <!-- Slot 4 -->
+    <div class="comic">
+      <a href="the-amazing-spiderman-129.html" style="width: 100%; text-decoration: none;">
+        <div class="comic-box" style="background-image: url('covers/the-amazing-spiderman-129.jpg');"></div>
+      </a>
+      <a href="the-amazing-spiderman-129.html" class="comic-title">The Amazing Spider-Man #129</a>
+    </div>
+
+    <!-- Slot 5 -->
+    <div class="comic">
+      <a href="amazing-adventures-x-men-5.html" style="width: 100%; text-decoration: none;">
+        <div class="comic-box" style="background-image: url('covers/amazing-adventures-featuring-x-men-5.jpg');"></div>
+      </a>
+      <a href="amazing-adventures-x-men-5.html" class="comic-title">Amazing Adventures Featuring: X-MEN #5</a>
+    </div>
+
+    <!-- Slot 6 -->
+    <div class="comic">
+      <a href="spawn-9.html" style="width: 100%; text-decoration: none;">
+        <div class="comic-box" style="background-image: url('covers/spawn-9.jpg');"></div>
+      </a>
+      <a href="spawn-9.html" class="comic-title">SPAWN #9</a>
+    </div>
+
+    <!-- Slot 7 -->
+    <div class="comic">
+      <a href="the-new-mutants-87.html" style="width: 100%; text-decoration: none;">
+        <div class="comic-box" style="background-image: url('covers/the-new-mutants-87.jpg');"></div>
+      </a>
+      <a href="the-new-mutants-87.html" class="comic-title">The New Mutants #87</a>
+    </div>
+
+    <!-- Slot 8 -->
+    <div class="comic">
+      <a href="hulk-grand-design.html" style="width: 100%; text-decoration: none;">
+        <div class="comic-box" style="background-image: url('covers/hulk-grand-design.jpg');"></div>
+      </a>
+      <a href="hulk-grand-design.html" class="comic-title">Hulk: Grand Design</a>
+    </div>
+
+    <!-- Slot 9 -->
+    <div class="comic">
+      <a href="the-avengers-57.html" style="width: 100%; text-decoration: none;">
+        <div class="comic-box" style="background-image: url('covers/the-avengers-57.jpg');"></div>
+      </a>
+      <a href="the-avengers-57.html" class="comic-title">The Avengers #57</a>
+    </div>
+
+    <!-- Slot 10 -->
+    <div class="comic">
+      <a href="gijoe-real-american-hero-1.html" style="width: 100%; text-decoration: none;">
+        <div class="comic-box" style="background-image: url('covers/gijoe-real-american-hero-1.jpg');"></div>
+      </a>
+      <a href="gijoe-real-american-hero-1.html" class="comic-title">GIJOE: Real American Hero #1</a>
+    </div>
+
+    <!-- Slot 11 -->
+    <div class="comic">
+      <a href="batman-1989-echoes-1.html" style="width: 100%; text-decoration: none;">
+        <div class="comic-box" style="background-image: url('covers/batman-89-echoes.jpg');"></div>
+      </a>
+      <a href="batman-1989-echoes-1.html" class="comic-title">Batman 1989: Echoes #1</a>
+    </div>
+
+    <!-- Slot 12 -->
+    <div class="comic">
+      <a href="spawn-1.html" style="width: 100%; text-decoration: none;">
+        <div class="comic-box" style="background-image: url('covers/spawn-1.jpg');"></div>
+      </a>
+      <a href="spawn-1.html" class="comic-title">SPAWN #1</a>
+    </div>
+
+    <!-- Slot 13 -->
+    <div class="comic">
+      <a href="dawn-of-dc-superman-1.html" style="width: 100%; text-decoration: none;">
+        <div class="comic-box" style="background-image: url('covers/dawn-of-dc-superman-1.jpg');"></div>
+      </a>
+      <a href="dawn-of-dc-superman-1.html" class="comic-title">Dawn of DC: Superman #1</a>
+    </div>
+
+    <!-- Slot 14 -->
+    <div class="comic">
+      <a href="brzrkr-poetry-of-madness-1.html" style="width: 100%; text-decoration: none;">
+        <div class="comic-box" style="background-image: url('covers/brzrkr-poetry-of-madness.jpg');"></div>
+      </a>
+      <a href="brzrkr-poetry-of-madness-1.html" class="comic-title">BRZRKR: Poetry of Madness #1</a>
+    </div>
+
+    <!-- Slot 15 -->
+    <div class="comic">
+      <a href="geiger-ground-zero-1.html" style="width: 100%; text-decoration: none;">
+        <div class="comic-box" style="background-image: url('covers/geiger-ground-zero-1.jpg');"></div>
+      </a>
+      <a href="geiger-ground-zero-1.html" class="comic-title">GEIGER: Ground Zero #1</a>
+    </div>
+
+    <!-- Slot 16 -->
+    <div class="comic">
+      <a href="ultimate-fallout-4.html" style="width: 100%; text-decoration: none;">
+        <div class="comic-box" style="background-image: url('covers/ultimate-fallout-4.jpg');"></div>
+      </a>
+      <a href="ultimate-fallout-4.html" class="comic-title">Ultimate Fallout #4</a>
+    </div>
+  </div>
+
+  <footer>
+    <a href="about.html"><div>ABOUT</div></a>
+    <a href="index.html"><div>HOMEPAGE</div></a>
+    <a href="search.html"><div>SEARCH</div></a>
+  </footer>
+</body>
+</html>

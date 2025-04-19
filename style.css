@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Banquise-Regular';
+    src: url('fonts/Banquise-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
+h1{
+    font-family: "Banquise-Regular";
+    font-size: 100%;
+    text-align: left;
+    margin-top: 10%;
+    line-height: 0.8;
+}

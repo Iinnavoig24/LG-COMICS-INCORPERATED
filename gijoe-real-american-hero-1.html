@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GIJOE: Real American Hero 1</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arimo:wght@700&family=Kantumruy+Pro&display=swap" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arimo', sans-serif;
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: black;
+    }
+
+    header {
+      padding: 3% 2% 1%;
+      font-size: 2.5vw;
+      font-weight: 700;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .comic-detail {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 4% 2% 12%;
+      gap: 4%;
+      background-color: rgba(255, 255, 255, 0.8);
+      flex-wrap: wrap;
+    }
+
+    .cover-box {
+      width: 40%;
+      padding-top: 60%;
+      background-color: #777;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .info-box {
+      background-color: white;
+      padding: 2%;
+      width: 40%;
+      font-size: 1.2vw;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .comic-detail {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .cover-box {
+        width: 80%;
+        padding-top: 120%;
+      }
+
+      .info-box {
+        width: 80%;
+        font-size: 3vw;
+      }
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #004ABC;
+      color: white;
+      font-family: 'Arimo', sans-serif;
+      font-weight: 700;
+      font-size: 1.2vw;
+      display: flex;
+      justify-content: space-around;
+      padding: 1.5% 0;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    const backgrounds = [
+      'collection-backgrounds/batmansuperman.jpg',
+      'collection-backgrounds/geiger.jpg',
+      'collection-backgrounds/spawnandbatman.jpg',
+      'collection-backgrounds/spiderman.jpg',
+      'collection-backgrounds/xmen.jpg'
+    ];
+    document.body.style.backgroundImage = `url('${backgrounds[Math.floor(Math.random() * backgrounds.length)]}')`;
+  </script>
+
+  <header>GIJOE: Real American Hero 1</header>
+
+  <div class="comic-detail">
+    <div class="cover-box" style="background-image: url('covers/gijoe-real-american-hero-1.jpg');"></div>
+
+    <div class="info-box">
+      <p><strong>Released date:</strong> Novermber 15th, 2023</p>
+      <p><strong>Artist and writer:</strong> Chris Mooneyham & Larry Hama</p>
+      <p><strong>Synopsis:</strong> A new era for G.I. JOE starts here...but one Joe wont survive THIS ISSUE! The legendary LARRY HAMA is joined by new series artist CHRIS MOONEYHAM (Five Ghosts) and cover artist ANDY KUBERT (Batman, X-Men) to continue one of the longest-running titles in comics history!</p>
+      <p><strong>Appearing Main Characters:</strong> The Joes, Snake Eyes, Storm Shadow, Cobra Commander</p>
+      <p><strong>Series:</strong> GIJOE: Real American Hero </p>
+    </div>
+  </div>
+
+  <footer>
+    <a href="about.html"><div>ABOUT</div></a>
+    <a href="index.html"><div>HOMEPAGE</div></a>
+    <a href="search.html"><div>SEARCH</div></a>
+  </footer>
+</body>
+</html>

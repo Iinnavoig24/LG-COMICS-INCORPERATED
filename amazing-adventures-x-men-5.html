@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>X-MEN 5</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arimo:wght@700&family=Kantumruy+Pro&display=swap" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arimo', sans-serif;
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: black;
+    }
+
+    header {
+      padding: 3% 2% 1%;
+      font-size: 2.5vw;
+      font-weight: 700;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .comic-detail {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 4% 2% 12%;
+      gap: 4%;
+      background-color: rgba(255, 255, 255, 0.8);
+      flex-wrap: wrap;
+    }
+
+    .cover-box {
+      width: 40%;
+      padding-top: 60%;
+      background-color: #777;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .info-box {
+      background-color: white;
+      padding: 2%;
+      width: 40%;
+      font-size: 1.2vw;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .comic-detail {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .cover-box {
+        width: 80%;
+        padding-top: 120%;
+      }
+
+      .info-box {
+        width: 80%;
+        font-size: 3vw;
+      }
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #004ABC;
+      color: white;
+      font-family: 'Arimo', sans-serif;
+      font-weight: 700;
+      font-size: 1.2vw;
+      display: flex;
+      justify-content: space-around;
+      padding: 1.5% 0;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    const backgrounds = [
+      'collection-backgrounds/batmansuperman.jpg',
+      'collection-backgrounds/geiger.jpg',
+      'collection-backgrounds/spawnandbatman.jpg',
+      'collection-backgrounds/spiderman.jpg',
+      'collection-backgrounds/xmen.jpg'
+    ];
+    document.body.style.backgroundImage = `url('${backgrounds[Math.floor(Math.random() * backgrounds.length)]}')`;
+  </script>
+
+  <header>Amazing Adventures Featuring: X-MEN 5</header>
+
+  <div class="comic-detail">
+    <div class="cover-box" style="background-image: url('covers/amazing-adventures-featuring-x-men-5.jpg');"></div>
+
+    <div class="info-box">
+      <p><strong>Released date:</strong> Apr 10, 1980</p>
+      <p><strong>Artist and writer:</strong> Jack Kirby & Stan Lee</p>
+      <p><strong>Synopsis:</strong>Professor Xavier interrupts the X-Men's latest training session to inform them that he has mentally detected a new mutant nearby. The X-Men find the mutant known as the Blob working at a carnival. They invite the Blob into the school so that Professor Xavier can test his powers. Afterwards, Professor Xavier invites the Blob to join the X-Men, but he refuses. In an attempt to maintain the X-Men's secret identities, Professor Xavier tries to mind-wipe the Blob, but he is able to escape.</p>
+      <p><strong>Appearing Main Characters:</strong> The Golden Age X-men, The Blob, Professor X aka Charles Xavior  </p>
+      <p><strong>Series:</strong> Golden Age X-Men</p>
+    </div>
+  </div>
+
+  <footer>
+    <a href="about.html"><div>ABOUT</div></a>
+    <a href="index.html"><div>HOMEPAGE</div></a>
+    <a href="search.html"><div>SEARCH</div></a>
+  </footer>
+</body>
+</html>

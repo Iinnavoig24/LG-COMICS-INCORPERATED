@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Publisher Page</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arimo:wght@700&family=Kantumruy+Pro&display=swap" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arimo', sans-serif;
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: black;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    .background-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.8);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    header {
+      padding: 3% 2% 1%;
+      font-size: 2.5vw;
+      font-weight: 700;
+      background-color: transparent;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .search-container {
+      text-align: center;
+      margin: 2% auto;
+      padding: 2%;
+      width: 50%;
+      position: relative;
+      z-index: 1;
+    }
+
+    .search-container input {
+      padding: 1%;
+      width: 80%;
+      font-size: 1.2vw;
+    }
+
+    .search-container ul {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 2%;
+    }
+
+    .search-container li a {
+      color: #004ABC;
+      font-family: 'Kantumruy Pro', sans-serif;
+      font-size: 1.2vw;
+      text-decoration: underline;
+      display: block;
+      padding: 1% 0;
+    }
+
+    .search-container li a:hover {
+      text-decoration: none;
+    }
+
+    .search-container ul ul {
+      margin-left: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .search-container {
+        width: 90%;
+      }
+
+      .search-container input {
+        font-size: 3vw;
+      }
+
+      .search-container li a {
+        font-size: 3vw;
+      }
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #004ABC;
+      color: white;
+      font-family: 'Arimo', sans-serif;
+      font-weight: 700;
+      font-size: 1.2vw;
+      display: flex;
+      justify-content: space-around;
+      padding: 1.5% 0;
+      z-index: 1;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="background-overlay"></div>
+
+  <script>
+    const backgrounds = [
+      'collection-backgrounds/batmansuperman.jpg',
+      'collection-backgrounds/geiger.jpg',
+      'collection-backgrounds/spawnandbatman.jpg',
+      'collection-backgrounds/spiderman.jpg',
+      'collection-backgrounds/xmen.jpg'
+    ];
+    document.body.style.backgroundImage = `url('${backgrounds[Math.floor(Math.random() * backgrounds.length)]}')`;
+  </script>
+
+  <header>Publisher Search</header>
+
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search Publishers..." onkeyup="searchFunction()" />
+    <ul id="comicList">
+      <li>
+        <a href="#" onclick="toggleDropdown(event, 'marvelDropdown')">MARVEL</a>
+        <ul id="marvelDropdown" style="display: none; margin-left: 20px;">
+          <li><a href="spiderman-186.html">The Amazing Spider-Man #186</a></li>
+          <li><a href="howard-the-duck-1.html">Howard the Duck #1</a></li>
+          <li><a href="the-amazing-spiderman-129.html">The Amazing Spider-Man #129</a></li>
+          <li><a href="amazing-adventures-x-men-5.html">Amazing Adventures X-Men #5</a></li>
+          <li><a href="the-new-mutants-87.html">The New Mutants #87</a></li>
+          <li><a href="hulk-grand-design.html">Hulk: Grand Design</a></li>
+          <li><a href="the-avengers-57.html">The Avengers #57</a></li>
+          <li><a href="ultimate-fallout-4.html">Ultimate Fallout #4</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" onclick="toggleDropdown(event, 'dcDropdown')">DC COMICS</a>
+        <ul id="dcDropdown" style="display: none; margin-left: 20px;">
+          <li><a href="batman-1989-echoes-1.html">Batman 1989: Echoes #1</a></li>
+          <li><a href="dawn-of-dc-superman-1.html">Dawn of DC: Superman #1</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" onclick="toggleDropdown(event, 'imageDropdown')">IMAGE COMICS</a>
+        <ul id="imageDropdown" style="display: none; margin-left: 20px;">
+          <li><a href="undiscovered-country-25.html">Undiscovered Country #25</a></li>
+          <li><a href="spawn-9.html">SPAWN #9</a></li>
+          <li><a href="gijoe-real-american-hero-1.html">GIJOE: Real American Hero #1</a></li>
+          <li><a href="spawn-1.html">SPAWN #1</a></li>
+          <li><a href="geiger-ground-zero-1.html">GEIGER: Ground Zero #1</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" onclick="toggleDropdown(event, 'boomDropdown')">BOOM Studios</a>
+        <ul id="boomDropdown" style="display: none; margin-left: 20px;">
+          <li><a href="brzrkr-poetry-of-madness-1.html">BRZRKR: Poetry of Madness #1</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <footer>
+    <a href="about.html"><div>ABOUT</div></a>
+    <a href="index.html"><div>HOMEPAGE</div></a>
+    <a href="search.html"><div>SEARCH</div></a>
+  </footer>
+
+  <script>
+    function searchFunction() {
+      let input = document.getElementById("searchInput");
+      let filter = input.value.toUpperCase();
+      let ul = document.getElementById("comicList");
+      let li = ul.getElementsByTagName("li");
+
+      for (let i = 0; i < li.length; i++) {
+        let a = li[i].getElementsByTagName("a")[0];
+        let txtValue = a.textContent || a.innerText;
+        li[i].style.display = txtValue.toUpperCase().indexOf(filter) > -1 ? "" : "none";
+      }
+    }
+
+    function toggleDropdown(event, id) {
+      event.preventDefault();
+      var dropdown = document.getElementById(id);
+      dropdown.style.display = dropdown.style.display === "none" ? "block" : "none";
+    }
+  </script>
+</body>
+</html>

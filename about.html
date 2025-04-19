@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arimo:wght@700&display=swap" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arimo', sans-serif;
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: black;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    .background-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(255, 255, 255, 0.8);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    header {
+      font-size: 2.5vw;
+      font-weight: 700;
+      padding: 3% 2% 1%;
+      background-color: transparent;
+      position: relative;
+      z-index: 1;
+    }
+
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4%;
+      padding: 4% 2% 12%;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+
+    .content-image-wrapper {
+      width: 40%;
+      text-align: center;
+    }
+
+    .content img {
+      width: 100%;
+      height: auto;
+    }
+
+    .caption {
+      text-align: center;
+      margin-top: 2%;
+      font-size: 1vw;
+    }
+
+    .text {
+      width: 40%;
+      text-align: right;
+      font-size: 1.2vw;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+        align-items: center;
+      }
+      .content-image-wrapper {
+        width: 80%;
+      }
+      .caption {
+        font-size: 3vw;
+        margin-top: 2%;
+      }
+      .text {
+        width: 80%;
+        text-align: center;
+        font-size: 3vw;
+        margin-top: 3%;
+      }
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #004ABC;
+      color: white;
+      font-family: 'Arimo', sans-serif;
+      font-weight: 700;
+      font-size: 1.2vw;
+      display: flex;
+      justify-content: space-around;
+      padding: 1.5% 0;
+      z-index: 10;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="background-overlay"></div>
+
+  <script>
+    const backgrounds = [
+      'collection-backgrounds/batmansuperman.jpg',
+      'collection-backgrounds/geiger.jpg',
+      'collection-backgrounds/spawnandbatman.jpg',
+      'collection-backgrounds/spiderman.jpg',
+      'collection-backgrounds/xmen.jpg'
+    ];
+    document.body.style.backgroundImage = `url('${backgrounds[Math.floor(Math.random() * backgrounds.length)]}')`;
+  </script>
+
+  <header>ABOUT ME</header>
+
+  <div class="content">
+    <div class="content-image-wrapper">
+      <img src="images/about-photo.jpg" alt="Me and my dad at a hockey game" />
+      <div class="caption">Me and my dad the year we started getting into comic collecting</div>
+    </div>
+
+    <div class="text">
+      <p>To whomever is reading this,</p>
+      <p>Welcome to a digitalized collection of some of my most favourite comic books ever. Every single book included in this website holds a special place in my heart. My father Lorenzo started me on my collecting path and still collects with me almost 10 years later. We have a variety of different comics that range from different publishers, release years, artists, and characters.</p>
+    </div>
+  </div>
+
+  <footer>
+    <a href="about.html"><div>ABOUT</div></a>
+    <a href="index.html"><div>HOMEPAGE</div></a>
+    <a href="search.html"><div>SEARCH</div></a>
+  </footer>
+</body>
+</html>
